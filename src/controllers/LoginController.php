@@ -36,4 +36,15 @@ class LoginController extends Controller
             //throw $th;
         }
     }
+    public function salir()
+    {
+        try {
+            session_unset();
+            session_destroy();
+            $mensaje = "fin de session";
+            $this->render('autos/mensaje', ["mensaje" => $mensaje]);
+        } catch (\Throwable $th) {
+            //throw $th;
+        }
+    }
 }

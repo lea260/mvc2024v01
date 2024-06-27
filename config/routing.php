@@ -17,3 +17,4 @@ $router->add('autos/borrar', ['controller' => 'Auto', 'action' => 'borrar']);
 //login
 $router->add('login/ingresar', ['controller' => 'Login', 'action' => 'ingresar']);
 $router->add('login/entrar', ['controller' => 'Login', 'action' => 'entrar']);
+$router->add('login/salir', ['controller' => 'Login', 'action' => 'salir']);
