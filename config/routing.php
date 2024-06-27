@@ -4,8 +4,7 @@ use Empresa\App\Core\Router;
 
 $router = new Router();
 //pagina principal
-$router->add('', ['controller' => 'Index', 'action' => 'index']);
-$router->add('index.php', ['controller' => 'Index', 'action' => 'index']);
+$router->add('home', ['controller' => 'Index', 'action' => 'index']);
 //$router->add('articulo/listar', ['controller' => 'Articulo', 'action' => 'listar']);
 //http: //localhost/mvccomposer/index.php/auto/nuevo
 //autos
