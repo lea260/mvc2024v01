@@ -34,6 +34,7 @@ class LoginController extends Controller
             $this->render('autos/mensaje', ["mensaje" => $mensaje]);
         } catch (\Throwable $th) {
             //throw $th;
+            $this->render('index/index');
         }
     }
     public function salir()

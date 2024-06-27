@@ -6,6 +6,7 @@ namespace Empresa\App\Controllers;
 
 use Empresa\App\Core\Controller;
 use Empresa\App\Models\Auto;
+use Exception;
 
 class AutoController extends Controller
 {
@@ -15,9 +16,17 @@ class AutoController extends Controller
     }
     public function nuevo()
     {
+        try {
+            $rol = $_SESSION['rol'];
+            if ($rol != "admin") {
+                throw new Exception("permiso denegado");
+            }
+            $this->render('autos/nuevo');
+        } catch (\Throwable $th) {
+            $this->render('index/index');
+        }
         //var_dump($_GET);
         //formulario de autos
-        $this->render('autos/nuevo');
     }
     public function crear()
     {
@@ -40,6 +49,7 @@ class AutoController extends Controller
             $this->render('autos/mensaje', ["mensaje" => $mensaje]);
         } catch (\Throwable $th) {
             //throw $th;
+
         }
     }
     public function modificar()

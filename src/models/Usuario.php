@@ -37,14 +37,14 @@ class Usuario
             // if (password_verify($paswPost,$pwdBD)
             if ($usuario == 'leandro' && $password == "1234") {
                 $res = true;
-                $_SESSION['rol'] = "admin";
+                $_SESSION['rol'] = "usuario";
                 $_SESSION['usuario'] = $usuario;
                 $_SESSION['id'] = 26;
                 $_SESSION['estaLog'] = true;
             }
             if ($usuario == 'diego' && $password == "1111") {
                 $res = true;
-                $_SESSION['rol'] = "usuario";
+                $_SESSION['rol'] = "admin";
                 $_SESSION['usuario'] = $usuario;
                 $_SESSION['id'] = 3;
                 $_SESSION['estaLog'] = true;
