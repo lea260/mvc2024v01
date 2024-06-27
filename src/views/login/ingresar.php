@@ -12,10 +12,7 @@
     <h1>Ingresar</h1>
 
     <!-- Formulario de Edición -->
-    <form action="<?= URL_BASE ?>autos/modificar" method="post">
-
-
-
+    <form action="<?= URL_BASE ?>login/entrar" method="post">
 
         <label for="usuario">Nombre:</label>
         <input type="text" id="usuario" name="usuario" required>
