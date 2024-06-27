@@ -18,6 +18,6 @@ class LoginController extends Controller
         //var_dump($_GET);
         //formulario de autos
         //$this->render('autos/nuevo');
-        echo "login";
+        $this->render('login/ingresar');
     }
 }
