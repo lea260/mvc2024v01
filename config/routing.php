@@ -14,3 +14,5 @@ $router->add('autos/listar', ['controller' => 'Auto', 'action' => 'listar']);
 $router->add('autos/editar', ['controller' => 'Auto', 'action' => 'editar']);
 $router->add('autos/modificar', ['controller' => 'Auto', 'action' => 'modificar']);
 $router->add('autos/borrar', ['controller' => 'Auto', 'action' => 'borrar']);
+//login
+$router->add('login/ingresar', ['controller' => 'Login', 'action' => 'ingresar']);
