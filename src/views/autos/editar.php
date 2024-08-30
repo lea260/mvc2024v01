@@ -4,14 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <title>Editar Auto</title>
+    <link rel="stylesheet" href="<?= URL_BASE_PATH ?>public/css/autos/listar.css" rel="stylesheet">
 </head>
-
+ 
 <body>
     <?php require  'src/views/partials/menu.php'; ?>
     <h1>Editar Auto</h1>
 
     <!-- Formulario de Edición -->
-    <form action="<?= URL_BASE ?>autos/modificar" method="post">
+    <form action="<?= URL_BASE ?>autos/modificar" method="post" id="miFormulario">
         <input type="hidden" name="id" value="<?= htmlspecialchars($auto->getId()) ?>">
 
         <label for="marca">Marca:</label>
@@ -34,6 +35,10 @@
         <input type="hidden" name="id" value="<?= htmlspecialchars($auto->getId()) ?>">
         <button type="submit" style="background-color: red; color: white;">Eliminar Auto</button>
     </form>
+    <br>
+    <input type="button" id="editarBtn" value="editar">
+    <input type="button" id="borrarBtn" value="borrar">
+    <script src="<?= URL_BASE_PATH ?>public/js/index.js"></script>
 </body>
 
 </html>
