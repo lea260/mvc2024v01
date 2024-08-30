@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <title>Editar Auto</title>
     <link rel="stylesheet" href="<?= URL_BASE_PATH ?>public/css/autos/listar.css" rel="stylesheet">
+    <link rel="stylesheet" href="<?= URL_BASE_PATH ?>public/css/index/index.css" rel="stylesheet">
 </head>
- 
+
 <body>
     <?php require  'src/views/partials/menu.php'; ?>
     <h1>Editar Auto</h1>
