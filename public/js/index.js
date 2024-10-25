@@ -17,9 +17,9 @@ document.addEventListener('DOMContentLoaded', () => {
         enviarFormulario(); // Llamada a la función asíncrona sin await
     });
 
-    function editarFormulario() {
+    function borrarFormulario() {
         // Aquí colocas la lógica de edición
-        console.log('Formulario en modo edición...');
+        console.log('Formulario en modo borrado...');
     }
 
     async function editarFormulario() {

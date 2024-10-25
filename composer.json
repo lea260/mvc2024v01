@@ -4,7 +4,8 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Empresa\\App\\": "src/"
+            "Core\\": "src/Core/",
+            "Controllers\\": "src/Controllers/"
         }
     },
     "require": {

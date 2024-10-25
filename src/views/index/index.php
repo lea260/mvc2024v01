@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Menú Principal - Gestión de Autos</title>
-  <link rel="stylesheet" href="<?= URL_BASE_PATH ?>public/css/index/index.css" rel="stylesheet">
+  <link rel="stylesheet" href="<?= URL_BASE_PATH ?>public/css/index/index.css">
 </head>
 
 <body>

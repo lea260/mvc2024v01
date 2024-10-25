@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Empresa\App\Core;
+namespace Core;
 
 class Router
 {
@@ -10,8 +10,7 @@ class Router
         protected array $routes = [],
         protected array $params = [],
         private string $urlPrefix = "",
-    ) {
-    }
+    ) {}
 
     public function add(string $route, array $params): void
     {
@@ -30,7 +29,7 @@ class Router
         }
 
         if ($this->match($url)) {
-            $controller = "Empresa\\App\\Controllers\\" . $this->params['controller'] . "Controller";
+            $controller = "Controllers\\" . $this->params['controller'] . "Controller";
             if (class_exists($controller)) {
                 $controllerObject = new $controller();
                 $action = $this->params['action'];

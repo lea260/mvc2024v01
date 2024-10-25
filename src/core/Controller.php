@@ -2,14 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Empresa\App\Core;
+namespace Core;
 
 class Controller
 {
 
-    public function __construct($a = "")
-    {
-    }
+    public function __construct($a = "") {}
 
     public function render(string $temp, array $arr = []): void
     {

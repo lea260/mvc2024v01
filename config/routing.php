@@ -1,6 +1,12 @@
 <?php
 // Default route when no specific path is provided or just the base URL
-use Empresa\App\Core\Router;
+echo __DIR__ . '/../vendor/autoload.php';
+//cargo vendor bien
+require_once __DIR__ . '/../vendor/autoload.php';
+//require_once __DIR__ . '/../dep.php';
+//require_once __DIR__ . '/../vendor/autoload.php';
+
+use Core\Router;
 
 $router = new Router();
 //pagina principal
@@ -20,3 +26,5 @@ $router->add('login/entrar', ['controller' => 'Login', 'action' => 'entrar']);
 $router->add('login/salir', ['controller' => 'Login', 'action' => 'salir']);
 //mail
 $router->add('mail/enviar', ['controller' => 'Mail', 'action' => 'enviar']);
+//
+$router->add('admin/panelAdmin', ['controller' => 'Admin', 'action' => 'panelAdmin']);
