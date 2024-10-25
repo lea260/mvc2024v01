@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Empresa\App\Models;
+namespace Models;
 
 
-use Empresa\App\Core\Conexion;
+use Core\Conexion;
 use PDO;
 use PDOException;
 
@@ -19,8 +19,7 @@ class Auto
         public string $modelo,
         public string $fechaCompra,
         public ?int $id = null,
-    ) {
-    }
+    ) {}
 
     // Método para insertar un nuevo auto en la base de datos
     public function insertar(): bool

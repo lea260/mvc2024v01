@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Empresa\App\Controllers;
+namespace Controllers;
 
-use Empresa\App\Core\Controller;
-use Empresa\App\Models\Auto;
+use Core\Controller;
 use Exception;
+use Models\Auto;
 
 class AdminController extends Controller
 {

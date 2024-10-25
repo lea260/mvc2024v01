@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Empresa\App\Core;
+namespace Core;
 
 use PDO;
 use PDOException;

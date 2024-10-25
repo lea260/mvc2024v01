@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Empresa\App\Controllers;
+namespace Controllers;
 
-use Empresa\App\Core\Controller;
-use Empresa\App\Models\Auto;
-use Empresa\App\Models\Usuario;
+use Core\Controller;
+use Models\Auto;
+use Models\Usuario;
 
 class LoginController extends Controller
 {

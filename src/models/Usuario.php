@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Empresa\App\Models;
+namespace Models;
 
 
-use Empresa\App\Core\Conexion;
+use Core\Conexion;
 use PDO;
 use PDOException;
 use stdClass;
