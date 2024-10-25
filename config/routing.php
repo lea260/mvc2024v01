@@ -1,8 +1,8 @@
 <?php
 // Default route when no specific path is provided or just the base URL
-echo __DIR__ . '/../vendor/autoload.php';
+// echo __DIR__ . '/../vendor/autoload.php';
 //cargo vendor bien
-require_once __DIR__ . '/../vendor/autoload.php';
+// require_once __DIR__ . '/../vendor/autoload.php';
 //require_once __DIR__ . '/../dep.php';
 //require_once __DIR__ . '/../vendor/autoload.php';
 
