@@ -120,7 +120,7 @@ class AutoController extends Controller
             // Insertar en la base de datos
             $this->render('autos/editar', ["auto" => $auto]);
         } catch (\Throwable $th) {
-            //throw $th;
+            var_dump($th);
         }
     }
 }

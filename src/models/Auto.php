@@ -28,7 +28,7 @@ class Auto
         $stmt = null;
         try {
             $pdo = Conexion::getPDOConnection();
-            $sql = "INSERT INTO LanzamientosModelos (Marca, Modelo, Fecha_Compra) VALUES (:marca, :modelo, :fechaCompra)";
+            $sql = "INSERT INTO lanzamientosmodelos (Marca, Modelo, Fecha_Compra) VALUES (:marca, :modelo, :fechaCompra)";
             $stmt = $pdo->prepare($sql);
 
             // Vincular parámetros
@@ -88,7 +88,7 @@ class Auto
         $stmt = null;
         try {
             $pdo = Conexion::getPDOConnection();
-            $sql = "SELECT id, Marca, Modelo, Fecha_Compra FROM LanzamientosModelos WHERE id = :id";
+            $sql = "SELECT id, Marca, Modelo, Fecha_Compra FROM lanzamientosmodelos WHERE id = :id";
             $stmt = $pdo->prepare($sql);
             $stmt->bindParam(':id', $id, PDO::PARAM_INT);
             $stmt->execute();
@@ -101,7 +101,7 @@ class Auto
             }
         } catch (PDOException $e) {
             error_log("Error al obtener auto: " . $e->getMessage());
-            // Consider handling or re-throwing the exception depending on your error handling policy
+            throw $e;
         } finally {
             $stmt = null;
             $pdo = null;
@@ -116,7 +116,7 @@ class Auto
         $stmt = null;
         try {
             $pdo = Conexion::getPDOConnection();
-            $sql = "UPDATE LanzamientosModelos SET Marca=:marca, Modelo=:modelo, Fecha_Compra=:fechaCompra WHERE id=:id";
+            $sql = "UPDATE lanzamientosmodelos SET Marca=:marca, Modelo=:modelo, Fecha_Compra=:fechaCompra WHERE id=:id";
             $stmt = $pdo->prepare($sql);
 
             $stmt->bindParam(':marca', $this->marca, PDO::PARAM_STR);
@@ -140,7 +140,7 @@ class Auto
         $stmt = null;
         try {
             $pdo = Conexion::getPDOConnection();
-            $sql = "DELETE FROM LanzamientosModelos WHERE id=:id";
+            $sql = "DELETE FROM lanzamientosmodelos WHERE id=:id";
             $stmt = $pdo->prepare($sql);
             $stmt->bindParam(':id', $id, PDO::PARAM_INT);
             return $stmt->execute();

@@ -6,8 +6,8 @@
             <li><a href="<?= URL_BASE ?>autos/nuevo">Crear Auto</a></li>
         <?php endif; ?>
         <li><a href="<?= URL_BASE ?>autos/listar">Listar Autos</a></li>
-        <!-- <li><a href="<?= URL_BASE ?>mail/enviar">mail</a></li> -->
-        <?php $estaLog = $_SESSION['estaLog'] ?? false;
+        <?php
+        $estaLog = $_SESSION['estaLog'] ?? false;
         $usuario = $_SESSION['usuario'] ?? "def";
         ?>
         <?php if ($estaLog) : ?>
