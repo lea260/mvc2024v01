@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="<?= URL_BASE_PATH ?>public/css/index/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="<?= URL_BASE_PATH ?>public/css/index/index.css">
     <link rel="stylesheet" href="<?= URL_BASE_PATH ?>public/css/navbar.css">
     <title>Document</title>
 </head>

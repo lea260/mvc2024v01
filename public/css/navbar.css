@@ -6,6 +6,9 @@
     justify-content: center;
     align-items: center;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
 }
 
 /* Lista de navegación */
@@ -14,7 +17,9 @@
     margin: 0;
     padding: 0;
     display: flex;
+    flex-wrap: wrap;
     gap: 20px;
+    justify-content: center;
 }
 
 /* Elementos de la lista */
@@ -38,20 +43,15 @@
 
 /* Responsividad para pantallas pequeñas */
 @media (max-width: 600px) {
-    .navbar {
-        padding: 15px;
-    }
-
-    /* Ajuste a columnas en pantallas móviles */
     .navbar ul {
         flex-direction: column;
-        align-items: center;
         gap: 10px;
     }
 
     .navbar a {
-        width: 100%;
+        display: block;
         text-align: center;
         padding: 12px 0;
+        width: 100%;
     }
 }

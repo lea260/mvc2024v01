@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Editar Auto</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="<?= URL_BASE_PATH ?>public/css/autos/editar.css">
     <link rel="stylesheet" href="<?= URL_BASE_PATH ?>public/css/navbar.css">
 

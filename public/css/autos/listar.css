@@ -1,75 +1,41 @@
-/* Reset de estilo para mejorar la consistencia entre navegadores */
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
-    color: #333;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-}
-
-h1 {
-    margin-bottom: 20px;
-    font-size: 2em;
-    color: #333;
-}
-
 /* Contenedor de la tabla */
 .table-container {
-    width: 100%;
+    margin: 1em;
     overflow-x: auto;
+    width: 100%;
 }
 
-/* Estilos de la tabla */
+/* Estilos básicos de la tabla */
 table {
     width: 100%;
     border-collapse: collapse;
-    background-color: #fff;
+    font-size: 1em;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
 }
 
-th,
-td {
-    padding: 15px;
+table th,
+table td {
+    padding: 12px;
     text-align: left;
-    border: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
 }
 
-th {
-    background-color: #f4f4f4;
-    color: #555;
+/* Encabezados de la tabla */
+table th {
+    background-color: #333;
+    color: white;
+    font-weight: bold;
 }
 
-td {
-    color: #333;
-}
-
-/* Enlace para editar */
-td a {
-    color: #007bff;
-    text-decoration: none;
-}
-
-td a:hover {
-    text-decoration: underline;
+/* Filas alternas */
+table tr:nth-child(even) {
+    background-color: #f4f4f9;
 }
 
 /* Responsividad para pantallas pequeñas */
 @media (max-width: 768px) {
-    h1 {
-        font-size: 1.5em;
-    }
 
+    /* Diseño en formato tarjeta */
     table,
     thead,
     tbody,
@@ -79,13 +45,19 @@ td a:hover {
         display: block;
     }
 
-    th {
+    /* Ocultar el encabezado en móviles */
+    thead tr {
         display: none;
     }
 
+    /* Estilo de tarjeta para cada fila */
     tr {
         margin-bottom: 15px;
-        border-bottom: 2px solid #ddd;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        background-color: #fff;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     }
 
     td {
@@ -93,39 +65,16 @@ td a:hover {
         justify-content: space-between;
         padding: 10px;
         border: none;
-        border-bottom: 1px solid #ddd;
+        white-space: normal;
+        text-align: left;
         position: relative;
-        padding-left: 50%;
-        text-align: right;
     }
 
-    td::before {
+    /* Etiquetas de encabezado para cada dato en móviles */
+    td:before {
         content: attr(data-label);
-        position: absolute;
-        left: 10px;
         font-weight: bold;
-        text-transform: uppercase;
-        color: #555;
+        color: #333;
+        margin-right: 10px;
     }
-}
-
-/* Asignar etiquetas de datos a cada celda para dispositivos móviles */
-tbody td:nth-of-type(1) {
-    data-label: "Id";
-}
-
-tbody td:nth-of-type(2) {
-    data-label: "Marca";
-}
-
-tbody td:nth-of-type(3) {
-    data-label: "Modelo";
-}
-
-tbody td:nth-of-type(4) {
-    data-label: "Fecha de Compra";
-}
-
-tbody td:nth-of-type(5) {
-    data-label: "Editar";
 }
